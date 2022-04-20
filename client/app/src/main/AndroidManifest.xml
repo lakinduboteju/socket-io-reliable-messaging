@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sg.com.temasys.lakinduboteju.socketioreliablemessagingclient">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:label="SocketIOReliableMessagingClient"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight"
+        android:usesCleartextTraffic="true" />
+
+</manifest>

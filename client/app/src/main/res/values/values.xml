@@ -1,0 +1,4 @@
+<resources>
+    <string name="socketio_server_host">192.168.1.11</string>
+    <integer name="sockerio_server_port">6001</integer>
+</resources>
