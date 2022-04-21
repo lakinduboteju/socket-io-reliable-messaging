@@ -30,7 +30,7 @@ sticky(stickyOptions, () => {
 
   // Redis client ready handler
   redisClient.on('ready', () => {
-    console.debug(`WORKER ${workerId} started`);
+    console.debug(`WORKER ${workerId} started. PID:${process.pid}`);
 
     // SocketIO connection handler
     io.sockets.on('connection', async socket => {
@@ -80,5 +80,7 @@ sticky(stickyOptions, () => {
 
   return server;
 }).listen(config.socketIoPort, () => {
-  console.debug(`SocketIO server listening at port ${config.socketIoPort}`);
+  if (cluster.isMaster) {
+    console.debug(`MASTER WORKER PID:${process.pid} | SocketIO server listening at port ${config.socketIoPort}`);
+  }
 });
